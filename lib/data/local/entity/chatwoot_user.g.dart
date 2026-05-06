@@ -31,6 +31,7 @@ class ChatwootUserAdapter extends TypeAdapter<ChatwootUser> {
   void write(BinaryWriter writer, ChatwootUser obj) {
     writer
       ..writeByte(7)
+      ..writeByte(7)
       ..writeByte(0)
       ..write(obj.identifier)
       ..writeByte(1)
@@ -43,6 +44,7 @@ class ChatwootUserAdapter extends TypeAdapter<ChatwootUser> {
       ..write(obj.phone_number)
       ..writeByte(5)
       ..write(obj.avatarUrl)
+      ..writeByte(6)
       ..writeByte(6)
       ..write(obj.customAttributes);
   }
